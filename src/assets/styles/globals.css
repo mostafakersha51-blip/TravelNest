@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+@import './animations.css';
+
+body {
+  font-family: 'Poppins', sans-serif;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+.hero-section {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://i.ibb.co/dwLxwT3L/Background.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 65vh;
+}
+
+.destination-card:hover .destination-overlay {
+  opacity: 1;
+}
+
+.destination-overlay {
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+  opacity: 0.7;
+  transition: all 0.3s ease;
+}
+
+.scale-up {
+  transition: transform 0.3s ease;
+}
+
+.scale-up:hover {
+  transform: scale(1.03);
+}
+
+.nav-link {
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+@media (min-width: 1024px) {
+  .nav-link:hover {
+    background-color: #14b8a6; 
+    color: #fff;
+    border-radius: 9999px;
+    box-shadow: 0 4px 15px rgba(20, 184, 166, 0.4);
+  }
+}
+
+
+#testimonial-container {
+  overflow: hidden;
+  width: 100%;
+}
+
+#testimonial-slider {
+  width: 100%;
+  display: flex;
+  transition: transform 0.5s ease-out;
+}
+
+#testimonial-slider > div {
+  width: 100%;
+  flex-shrink: 0;
+  box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+  #testimonial-container .rounded-lg {
+    border-radius: 0.5rem;
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 1023px) {
+  .nav-link {
+    display: block;
+    padding: 0.75rem 1rem;
+    margin: 0.25rem 0;
+    border-radius: 0.375rem;
+  }
+}
